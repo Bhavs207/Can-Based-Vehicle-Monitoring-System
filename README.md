@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5ff822cc-21b0-4aee-8c73-c05f7c7605be" /># Can-Based-Vehicle-Monitoring-System
+
 CAN-Based Vehicle Safety and Monitoring System using LPC2129 ARM7 and CAN protocol. The system monitors engine temperature, controls vehicle indicators, and detects reverse obstacles through communication between multiple CAN nodes, improving vehicle safety and real-time monitoring.
 
 ## Table of Contents
@@ -59,6 +59,12 @@ It performs the following operations:
 * Activates the warning LED when an obstacle is detected.
 
 ### Main Node Flow
+
+<img width="1373" height="1145" alt="image" src="https://github.com/user-attachments/assets/ac34fb51-e2e1-410e-a80b-42db549b014b" />
+
+
+
+
 
 
 # 5. Node 2 – Indicator Node
