@@ -69,6 +69,8 @@ It performs the following operations:
 
 # 5. Node 2 – Indicator Node
 The Indicator Node receives commands from the Main Node through CAN.
+<img width="1166" height="1349" alt="image" src="https://github.com/user-attachments/assets/9cbc3828-8880-423b-97e6-f7fa5ba1d0bf" />
+
 
 
 
@@ -76,6 +78,8 @@ The Indicator Node receives commands from the Main Node through CAN.
 
 This node detects obstacles behind the vehicle using the  ultrasonic sensor.
 The measured distance is compared with 20 cm.
+
+<img width="1156" height="1361" alt="image" src="https://github.com/user-attachments/assets/63e39fd6-9090-4ca3-b594-4905c4ca4fef" />
 
 
 
@@ -88,8 +92,7 @@ The Main Node receives this information and displays the status / activates the 
 
 # 7.Complete Project Flow
 
-This is the most important part to remember for an interview.
-
+![Uploading image.png…]()
 
           
 
