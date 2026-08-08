@@ -8,12 +8,10 @@ CAN-Based Vehicle Safety and Monitoring System using LPC2129 ARM7 and CAN protoc
 4. Node 1 – Main Node.
 5. Node 2 – Indicator Node.
 6. Node 3 – Reverse Alert Node.
-7. Complete Project Flow.
-8. How CAN Communication Is Used.
-9. Hardware Used.
-10. Key Features.
-11. Future Improvements.
-12. Project Author.
+7. How CAN Communication Is Used.
+8. Hardware Used.
+9. Key Features.
+10. Future Improvements.
 
 
 ## 1. Project in One Minute
@@ -88,16 +86,11 @@ The measured distance is compared with 20 cm.
 * Distance < 20 cm → ALERT
 * Distance ≥ 20 cm → SAFE
 * No object detected → 999 cm
-The Main Node receives this information and displays the status / activates the warning LED.
-
-# 7.Complete Project Flow
-
-
-![Uploading image.png…]()
+The Main Node receives this information and displays the status / activates the warning LED
 
 
 
-# 8.  How CAN Communication Is Used
+# 7.  How CAN Communication Is Used
 
 CAN is used as the communication medium between the three LPC2129 nodes.
 The CAN communication uses the MCP2551 CAN transceiver.
@@ -107,7 +100,7 @@ The CAN bus uses:
 * 120 Ω termination resistors
 The project README specifies that the three LPC2129 nodes communicate over this CAN Bus and that MCP2551 is used as the CAN transceiver
 
-# 9.  Hardware Used
+# 8.  Hardware Used
 
  Component       Purpose                          
  
@@ -120,7 +113,7 @@ The project README specifies that the three LPC2129 nodes communicate over this 
  MCP2551      CAN transceiver                  
  CANH/CANL   CAN communication                
 
-# 10. Key Features
+# 9. Key Features
 
 * Real-time engine temperature monitoring.
 * Reverse obstacle detection.
@@ -130,7 +123,7 @@ The project README specifies that the three LPC2129 nodes communicate over this 
 * Warning indication when an obstacle is within 20 cm.
 * Modular multi-node automotive system.
 
-# 11. Future Improvements
+# 10. Future Improvements
 
 Possible future improvements include:
 
@@ -143,6 +136,6 @@ Possible future improvements include:
 * Mobile application for monitoring
 
 
-## 12.Project Author
+## Project Author
 Bhavani Taddi
 Embedded Systems | Embedded C | ARM7 | LPC2129 | CAN
