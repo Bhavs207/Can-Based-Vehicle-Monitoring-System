@@ -46,9 +46,6 @@ This helped me understand how CAN protocol is used in automotive embedded system
 
 
 
-                              
-
-
 # 4. Node 1 – Main Node
 The Main Node is the central controlling node.
 
