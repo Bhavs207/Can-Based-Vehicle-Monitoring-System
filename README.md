@@ -92,27 +92,13 @@ The Main Node receives this information and displays the status / activates the 
 
 # 7.Complete Project Flow
 
+
 ![Uploading image.png…]()
 
-          
 
 # 8.  How CAN Communication Is Used
 
 CAN is used as the communication medium between the three LPC2129 nodes.
-
-LPC2129 Main Node
-        │
-        │
-      CANH
-        │
-     CAN BUS
-        │
-      CANL
-        │
-   ┌────┴────┐
-   │         │
-Indicator   Reverse
-  Node       Node
 The CAN communication uses the MCP2551 CAN transceiver.
 The CAN bus uses:
 * CANH
