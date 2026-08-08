@@ -1,4 +1,4 @@
-# Can-Based-Vehicle-Monitoring-System
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5ff822cc-21b0-4aee-8c73-c05f7c7605be" /># Can-Based-Vehicle-Monitoring-System
 CAN-Based Vehicle Safety and Monitoring System using LPC2129 ARM7 and CAN protocol. The system monitors engine temperature, controls vehicle indicators, and detects reverse obstacles through communication between multiple CAN nodes, improving vehicle safety and real-time monitoring.
 
 ## Table of Contents
@@ -39,23 +39,15 @@ This helped me understand how CAN protocol is used in automotive embedded system
 
 
 ## 3. Basic Working
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a2298814-fb16-45e5-a1a0-967562c5dd1d" />
 
-The complete system works like this:
-                 CAN BUS
-                    │
-        ┌───────────┼───────────┐
-        │           │           │
-        ▼           ▼           ▼
-   MAIN NODE   INDICATOR NODE  REVERSE NODE
-        │           │           │
-        │           │           └── Ultrasonic Sensor
-        │           │
-        │           └── Left / Right LEDs
-        │
-        ├── DS18B20 Temperature Sensor
-        ├── 20x4 LCD
-        ├── Indicator Switches
-        └── Vehicle Mode Switch
+
+
+
+
+
+                              
+
 
 # 4. Node 1 – Main Node
 The Main Node is the central controlling node.
@@ -70,62 +62,18 @@ It performs the following operations:
 * Activates the warning LED when an obstacle is detected.
 
 ### Main Node Flow
-DS18B20
-   ↓
-Read Temperature
-   ↓
-Display on LCD
 
-Switches
-   ↓
-Detect Indicator / Vehicle Mode
-   ↓
-Send CAN Message
-   ↓
-Indicator Node
-
-Reverse Node
-   ↓
-Obstacle Status
-   ↓
-Main Node
-   ↓
-Warning LED / LCD
 
 # 5. Node 2 – Indicator Node
 The Indicator Node receives commands from the Main Node through CAN.
 
-Main Node
-    │
-    │ CAN Message
-    ▼
-Indicator Node
-    │
-    ├── Left Indicator
-    │
-    └── Right Indicator
+
 
 # 6. Node 3 – Reverse Alert Node
 
 This node detects obstacles behind the vehicle using the  ultrasonic sensor.
 The measured distance is compared with 20 cm.
 
-Ultrasonic Sensor
-       ↓
-Measure Distance
-       ↓
-   Is distance
-    < 20 cm?
-     /      \
-   YES       NO
-    ↓         ↓
- ALERT       SAFE
-    │         │
-    └────┬────┘
-         ↓
-     CAN Message
-         ↓
-      Main Node
 
 
 ### Conditions
@@ -140,44 +88,7 @@ The Main Node receives this information and displays the status / activates the 
 This is the most important part to remember for an interview.
 
 
-                 START
-                   ↓
-            Power ON System
-                   ↓
-          Initialize 3 Nodes
-                   ↓
-        ┌──────────┴──────────┐
-        ↓                     ↓
- Read Temperature       Read Switches
-        ↓                     ↓
-    Main Node             Main Node
-        │                     │
-        │              CAN Message
-        │                     ↓
-        │              Indicator Node
-        │                     ↓
-        │              Indicator ON/OFF
-        │
-        │
-        └──────────────┐
-                       ↓
-                Reverse Mode?
-                  /       \
-                NO         YES
-                │           │
-                │     Read Ultrasonic
-                │           ↓
-                │      Calculate Distance
-                │           ↓
-                │      Compare with 20 cm
-                │           ↓
-                │      SAFE / ALERT
-                │           ↓
-                └────── CAN Message
-                           ↓
-                       Main Node
-                           ↓
-                    LCD / Warning LED
+          
 
 # 8.  How CAN Communication Is Used
 
